@@ -83,6 +83,7 @@ namespace EditorExtensionsRedux
 					VerticalSnap = KeyCode.V,
 					HorizontalSnap = KeyCode.H,
 					CompoundPartAlign = KeyCode.U,
+                    FineAdjustWindow = KeyCode.None,
 
 					Up = KeyCode.UpArrow,
 					Down = KeyCode.DownArrow,
