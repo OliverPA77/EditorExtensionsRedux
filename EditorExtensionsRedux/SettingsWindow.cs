@@ -240,6 +240,20 @@ namespace EditorExtensionsRedux
 					GUILayout.Label ("Waiting for key");
 				}
 
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("Fine Adjust Window:", settingsLabelLayout);
+                if (keyMapToUpdate == "faw" && _lastKeyPressed != KeyCode.None)
+                {
+                    _config.KeyMap.FineAdjustWindow = _lastKeyPressed;
+                    keyMapToUpdate = string.Empty;
+                }
+                if (GUILayout.Button(_config.KeyMap.FineAdjustWindow.ToString()))
+                {
+                    _lastKeyPressed = KeyCode.None;
+                    keyMapToUpdate = "faw";
+                }
+                GUILayout.EndHorizontal();
+
 				GUILayout.BeginHorizontal ();
 				GUILayout.Label ("Up:", settingsLabelLayout);
 				if (keyMapToUpdate == "up" && _lastKeyPressed != KeyCode.None) {
