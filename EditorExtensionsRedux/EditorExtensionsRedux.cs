@@ -528,7 +528,17 @@ namespace EditorExtensionsRedux
 				}
 
 
-				if (_fineAdjustWindow.isEnabled ()) {
+                // Z - Toggle fine adjust window
+                if (Input.GetKeyDown(cfg.KeyMap.FineAdjustWindow) && !modKeyDown && !fineKeyDown) {
+                    if (_fineAdjustWindow.isEnabled()) {
+                        _fineAdjustWindow.CloseWindow();
+                    } else {
+                        _fineAdjustWindow.Show();
+                    }
+                    return;
+                }
+
+                if (_fineAdjustWindow.isEnabled ()) {
 					Vector3 axis;
 //					var gizmosOffset = HighLogic.FindObjectsOfType<EditorGizmos.GizmoOffset> ();
 //					if (gizmosOffset.Length > 0) {
