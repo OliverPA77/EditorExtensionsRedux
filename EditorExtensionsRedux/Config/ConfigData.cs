@@ -70,6 +70,9 @@ namespace EditorExtensionsRedux
 		[XmlElement ("CompoundPartAlign")]
 		public KeyCode CompoundPartAlign { get; set; }
 
+        [XmlElement("FineAdjustWindow")]
+        public KeyCode FineAdjustWindow { get; set; }
+
 
 		[XmlElement ("Up")]
 		public KeyCode Up { get; set; }
