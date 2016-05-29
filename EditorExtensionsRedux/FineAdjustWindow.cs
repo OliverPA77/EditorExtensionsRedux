@@ -41,7 +41,7 @@ namespace EditorExtensionsRedux
 			return this.enabled;
 		}
 
-		void CloseWindow ()
+		public void CloseWindow ()
 		{
 			this.enabled = false;
 			Log.Info ("CloseWindow enabled: " + this.enabled.ToString ());
